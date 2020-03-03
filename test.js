@@ -2,7 +2,7 @@ const https = require('https');
 var querystring = require("querystring");
 
 const postData = querystring.stringify({
-    'token': 'xoxp-947427472848-947427474208-953406020726-30d521c3c4389899b09b596500ddbf5d'
+    'token': ''
 });
 
 const options = {
