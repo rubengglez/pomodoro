@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <base href="/">
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" /> -->
-      <script src="https://unpkg.com/react@16/umd/react.development.js" ></script>
-      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-      <script type="module" src="react/index.js"></script>
+      <script src="https://unpkg.com/react@16/umd/react.production.min.js" ></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+      <script src="main.js"></script>
   </head>
   <body>
     <h1>Hello World!</h1>
     We are using node, Chrome and Electron
   </body>
   <div id="root"></div>
+  <div id="github"></div>
 </html>
