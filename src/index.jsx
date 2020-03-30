@@ -1,6 +1,18 @@
 import '../styles/main.scss'
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+// import React from "react";
+// import * as ReactDOM from "react-dom";
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Input from './shared/input';
+import Timer from './shared/timer';
+
+// function Input({descriptionLabel, defaultValue}) {
+//   return <div class="genericInput">
+//           <label>{descriptionLabel}</label>
+//           <input type="text" value={defaultValue} />
+//       </div>
+// }
 
 import {Test} from './test';
 
@@ -109,7 +121,9 @@ class Github extends React.Component {
           counter: this.props.counter,
           class: this.props.class,
         }
-      )
+      ),
+      <Input descriptionLabel="kkkkkkkkkk" defaultValue="4" />,
+      <Timer duration={10} completedHandler={() => {}} />
     )
   }
 }
@@ -123,6 +137,8 @@ const nodeGitbug = React.createElement(Github, {
 })
 
 ReactDOM.render(nodeGitbug, github);
+
+
 
 const x = 10;
 
