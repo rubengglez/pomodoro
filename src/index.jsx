@@ -5,7 +5,7 @@ import '../styles/main.scss'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Input from './shared/input';
-import Timer from './shared/timer';
+import Timer from './shared/timer/timer.component';
 
 // function Input({descriptionLabel, defaultValue}) {
 //   return <div class="genericInput">
@@ -123,7 +123,7 @@ class Github extends React.Component {
         }
       ),
       <Input descriptionLabel="kkkkkkkkkk" defaultValue="4" />,
-      <Timer duration={10} completedHandler={() => {}} />
+      <Timer duration={10*1000} />
     )
   }
 }
