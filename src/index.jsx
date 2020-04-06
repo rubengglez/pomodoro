@@ -3,7 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HomePage from './pages/home.page';
 import PomodoroPage from './pages/pomodoro.page';
-import SettingsPage from './pages/settings.page';
+import SettingsPage from './pages/settings/settings.page';
+import MainRouter from './main-router.component';
 
 const rootNode = document.getElementById('root');
 
@@ -15,9 +16,10 @@ class AppMain extends React.Component {
     return React.createElement(
       'div',
       {},
-      <HomePage />,
-      <PomodoroPage />,
-      <SettingsPage />
+      <MainRouter />
+      // <HomePage />,
+      // <PomodoroPage />,
+      // <SettingsPage />
     )
   }
 }
