@@ -14,8 +14,8 @@ export default function ButtonsGroup(props) {
 	});
 	return (
 		<div className='container-groupButtons'>
-			<Button title='reset' className={resetBtnClasses} />
-			<Button title='start' className={startBtnClass} />
+			<Button title='reset' className={resetBtnClasses} onClick={props.onReset} />
+			<Button title='start' className={startBtnClass} onClick={props.onSubmit} />
 		</div>
 	);
 }

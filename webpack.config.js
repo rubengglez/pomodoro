@@ -1,25 +1,25 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	output: {
-		path: path.resolve(__dirname, 'dist/')
+		path: path.resolve(__dirname, 'dist/'),
 	},
 	entry: {
-		main: './src/index.jsx'
+		main: './src/index.jsx',
 	},
 	resolve: {
-		extensions: ['.js', '.jsx']
+		extensions: ['.js', '.jsx'],
 	},
 	devtool: 'inline-source-map',
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: 'src/index.html',
-			hash: true
+			hash: true,
 		}),
-		new MiniCSSExtractPlugin()
+		new MiniCSSExtractPlugin(),
 	],
 	module: {
 		rules: [
@@ -29,19 +29,23 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-env', '@babel/preset-react']
-					}
-				}
+						presets: ['@babel/preset-env', '@babel/preset-react'],
+						plugins: [
+							['@babel/plugin-proposal-decorators', {legacy: true}],
+							'@babel/plugin-proposal-class-properties',
+						],
+					},
+				},
 			},
 			{
 				test: /\.scss$/,
-				loader: [MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader']
-			}
-		]
+				loader: [MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader'],
+			},
+		],
 	},
 	devServer: {
 		port: 9000,
 		contentBase: path.join(__dirname, 'dist'),
-		host: '0.0.0.0'
-	}
-}
+		host: '0.0.0.0',
+	},
+};

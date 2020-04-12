@@ -1,10 +1,12 @@
 import React from 'react';
 
-function Input({descriptionLabel, defaultValue}) {
+function Input({descriptionLabel, value, name, onChange}) {
+	const onChangeValue = (event) => onChange(event.target.value, name);
+
 	return (
 		<div className={`genericInput`}>
 			<label>{descriptionLabel}</label>
-			<input type='text' defaultValue={defaultValue} />
+			<input type='text' value={value} onChange={onChangeValue} />
 		</div>
 	);
 }
