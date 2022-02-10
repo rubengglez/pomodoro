@@ -34,7 +34,7 @@
     "husky": "^4.2.3",
     "jest": "^25.2.3",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "precise-commits": "^1.0.2",
     "prettier": "^2.0.4",
     "prettier-plugin-packagejson": "^2.1.2",
